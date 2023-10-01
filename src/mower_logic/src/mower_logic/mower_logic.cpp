@@ -249,7 +249,7 @@ bool setMowerEnabled(bool enabled)
         }
         else
         {
-            mow.srv.request.mow_direction = last_config.mow_default_direction; // Rotate mower in the default or hard-set direction in the config. 0 for ccw, 1 for cw.
+            mow_srv.request.mow_direction = last_config.mow_default_direction; // Rotate mower in the default or hard-set direction in the config. 0 for ccw, 1 for cw.
         }
 
         ROS_WARN_STREAM("#### om_mower_logic: setMowerEnabled(" << enabled << ", " << static_cast<unsigned>(mow_srv.request.mow_direction) << ") call");
